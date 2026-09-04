@@ -41,3 +41,13 @@ class SunoClient:
             response.raise_for_status()
 
             return response.json()
+
+    def build_song_payload(self,song):
+        return{
+            "customMode": True,
+            "instrumental": False,
+            "model": "V5",
+            "prompt": song.lyrics,
+            "style": song.style_prompt,
+            "title": song.title
+        }

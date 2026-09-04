@@ -1,6 +1,6 @@
 import asyncio
 
-from services.suno import SunoClient
+from app.services.suno_client import SunoClient
 
 
 async def main():
